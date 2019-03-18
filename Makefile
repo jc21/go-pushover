@@ -10,7 +10,7 @@ BINARY_NAME=pushover-cli
 all: build
 
 build:
-	$(GOBUILD) -o $(BINARY_NAME) -v -ldflags "-X main.GitCommit=$(GITCOMMIT) -X main.AppVersion=$(VERSION)"
+	GO111MODULE=on $(GOBUILD) -o $(BINARY_NAME) -v -ldflags "-X main.GitCommit=$(GITCOMMIT) -X main.AppVersion=$(VERSION)"
 
 clean:
 	$(GOCLEAN)
