@@ -4,7 +4,7 @@ Yes, it's another super simple command line interface for [Pushover](https://pus
 
 ```bash
 Send a single Pushover notification to a User
-Usage: pushover [--apptoken APPTOKEN] [--usertoken USERTOKEN] [--title TITLE] [--sound SOUND] [--device DEVICE] [--priority PRIORITY] [--url URL] [--urltitle URLTITLE] MESSAGE
+Usage: pushover-cli [--apptoken APPTOKEN] [--usertoken USERTOKEN] [--title TITLE] [--sound SOUND] [--device DEVICE] [--priority PRIORITY] [--url URL] [--urltitle URLTITLE] MESSAGE
 
 Positional arguments:
   MESSAGE                message text
@@ -28,10 +28,17 @@ Options:
   --version              display version and exit
 ```
 
-### Building
+### Installing
 
 ```bash
-git clone .
+go get github.com/jc21/pushover-cli
+```
+
+or build with:
+
+```bash
+git clone https://github.com/jc21/pushover-cli && cd pushover-cli
 make
+./pushover-cli -h
 ```
 
